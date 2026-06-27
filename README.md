@@ -18,19 +18,26 @@ Uma plataforma de aprendizado interativa criada para transformar a forma como in
 
 O BuildXP nasceu da ideia de que aprender programação não precisa ser uma jornada confusa cheia de conteúdos dispersos, termos difíceis e respostas prontas sem contexto.
 
-Hoje existem milhares de vídeos, cursos, artigos e ferramentas disponíveis gratuitamente, mas muitas pessoas que estão começando encontram dificuldades para entender:
+### Para que serve
 
-❓ O que é essa tecnologia?  
-❓ Para que ela serve?  
-❓ Quando utilizar?  
-❓ Onde aplicar?  
-❓ Por que aprender isso?
+| Necessidade | O que a BuildXP oferece |
+|-------------|-------------------------|
+| Aprender do zero | Slides passo a passo na aba **Iniciante**, com pausas e slide final |
+| Lembrar um comando | Aba **Cheap Codes** com busca e botão de copiar |
+| Ver tudo disponível | Página **Cards** com grid e pesquisa por nome, trilha ou comando |
+| Praticar no terminal | Seção de **treino** no site (comandos por card) |
+| Sugerir melhorias | **Feedback** público moderado antes de ir para o mural |
+| Criar e editar conteúdo | **Dashboard** admin/colaborador (JWT) com editor de cards e slides |
+
+---
 
 O BuildXP não foi criado para ser apenas mais uma plataforma de cursos.
 
 A proposta é construir um ambiente aberto, acessível e interativo onde qualquer pessoa possa aprender no próprio ritmo, evoluindo desde conceitos básicos até conteúdos mais avançados através de trilhas organizadas, desafios práticos e experiências reais.
 
 ---
+
+A ideia é simples: **aprender no fluxo**, consultar quando esquecer um comando e ganhar confiança até “shippar” código de verdade.
 
 ## 🧠 IA para o bem comum
 
@@ -58,44 +65,34 @@ A ideia é estimular:
 
 ---
 
-## ✨ Funcionalidades
+## Principais funcionalidades
 
-📚 Trilhas de aprendizado
+### Skill Cards
 
-🎯 Sistema de XP
+Cards publicados via API com ícone, raridade, barra de XP, descrição e links para:
 
-🏆 Sistema de evolução
+- **▶ COMEÇAR** — trilha iniciante (`card.html?slug=…&tab=beginner`)
+- **🎮 CHEAP CODES** — referência rápida (`card.html?slug=…&tab=ref`)
 
-💻 Terminal para prática
+No **index**, os cards aparecem em carrossel; na página **`cards.html`**, todos ficam listados em grid (4 colunas no desktop, 1 no mobile) com barra de pesquisa inteligente.
 
-🧩 Conteúdos explicativos
+### Cheap Codes
 
-🚀 Exercícios e desafios
-
-📈 Acompanhamento de progresso
-
-🤝 Comunidade e participação
+Comandos organizados por categoria, com descrição curta e cópia com um clique. A pesquisa filtra por comando, descrição e conteúdo dos slides (ex.: «biblioteca 
 
 ---
 
-## 🛠️ Tecnologias utilizadas
+## Stack técnica
 
-### Front-end
-- HTML
-- CSS
-- JavaScript
-
-### Back-end
-- C#
-- ASP.NET
-
-### Banco de Dados
-- PostgreSQL
-
-### Ferramentas
-- Docker
-- DBeaver
-- Azure Student
+| Camada | Tecnologia |
+|--------|------------|
+| Backend | ASP.NET Core **10** (C#) |
+| ORM | Entity Framework Core |
+| Banco de dados | **PostgreSQL** |
+| Autenticação | JWT (dashboard) |
+| Frontend | HTML, CSS modular, JavaScript (sem framework) |
+| API | REST + Swagger (desenvolvimento) |
+| Hospedagem estática | `wwwroot/` servido pelo próprio ASP.NET |
 
 ---
 
